@@ -98,6 +98,7 @@ const push = () => {
       }
       ariaToken && (ariaData.params.unshift(`token:${ariaToken}`))
       total--
+      setTimeout(() => {}, 300);
       pushToAria(ariaHost, ariaData).then((ariares) => {
         if (ariares.result) {
           success++
